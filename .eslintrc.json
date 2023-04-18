@@ -1,25 +1,30 @@
 {
-    "root": true,
     "env": {
         "browser": true,
-        "es2020": true
+        "es2021": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 12
-    },
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "rules":
-    {
-      "brace-style": ["error", "allman"],
-      "indent": ["error", 4],
-      "no-trailing-spaces": "error",
-      "@typescript-eslint/no-namespace": "off"
+    "rules": {
+        "brace-style": ["error", "1tbs"],
+        "space-before-function-paren": ["error", "never"],
+        "indent": ["error", 4 , {"SwitchCase": 1}],
+        "no-tabs": ["error", { "allowIndentationTabs": true }] ,
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "array-bracket-spacing": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "no-multi-spaces": "error",
+        "key-spacing": [1, {
+            "singleLine": {
+                "beforeColon": false,
+                "afterColon": true
+            },
+            "multiLine": {
+                "beforeColon": false,
+                "afterColon": true,
+                "align": "colon"
+            }
+        }],
+        "no-trailing-spaces": "error",
+        "object-curly-spacing": ["error", "never"]
     }
 }
